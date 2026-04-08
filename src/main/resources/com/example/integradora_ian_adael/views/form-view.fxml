@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.integradora_ian_adael.Controllers.FormController"
+      prefWidth="420" prefHeight="380" spacing="15">
+    <padding><Insets top="20" bottom="20" left="25" right="25"/></padding>
+
+    <Label text="Registrar / Editar Libro" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+
+    <GridPane hgap="12" vgap="10">
+        <Label text="ISBN / ID:"    GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtId"    GridPane.rowIndex="0" GridPane.columnIndex="1" prefWidth="230"/>
+
+        <Label text="Título:"       GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtTitulo" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Autor:"        GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtAutor" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Año:"          GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtAnio"  GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <Label text="Género:"       GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtGenero" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+        <Label text="Disponible:"   GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <CheckBox fx:id="chkDisponible" GridPane.rowIndex="5" GridPane.columnIndex="1" selected="true"/>
+    </GridPane>
+
+    <Label fx:id="lblError" style="-fx-text-fill: #e74c3c; -fx-font-style: italic;" wrapText="true"/>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Guardar"   onAction="#onGuardar"  style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-font-weight: bold;" prefWidth="100"/>
+        <Button text="Cancelar"  onAction="#onCancelar" style="-fx-background-color: #95a5a6; -fx-text-fill: white;" prefWidth="100"/>
+    </HBox>
+
+</VBox>

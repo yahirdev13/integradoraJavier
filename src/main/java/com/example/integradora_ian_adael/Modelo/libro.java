@@ -17,4 +17,12 @@ public class libro {
         this.genero     = genero;
         this.disponible = disponible;
     }
+
+    public String getId_libro()  { return id_libro; }
+    public String getTitulo()    { return titulo; }
+    public String getAutor()     { return autor; }
+    public int    getFecha_pub() { return fecha_pub; }
+    public String getGenero()    { return genero; }
+    public boolean isDisponible()  { return disponible; }
+    public boolean getDisponible() { return disponible; }
 }
